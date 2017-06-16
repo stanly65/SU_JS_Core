@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug</title>
+    <!--<script src="F02.10a_chessboard.js"></script>-->
+</head>
+<body>
+<div id="mainChessBoard">
+</div>
+<style>
+    #mainChessBoard {
+        width: 240px;
+        height: 240px;
+        border: 1px solid black;
+    }
+
+    div {
+        width: 30px;
+        height: 30px;
+        float: left;
+    }
+</style>
+<script>
+    function chessboard(size) {
+        let html = '<div class="chessboard">\n ';
+        for (var i = 0; i < sise * size; i++) {
+            document.getElementById("mainChessBoard").appendChild(document.createElement("div")).style.backgroundColor = parseInt((i / size) + i) % 2 == 0 ? '#ababab' : 'white';
+        }
+        return html + '</div>';
+      }
+
+</script>
+</body>
+</html>
